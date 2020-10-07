@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
+  </head>
+  <style>
+  body{
+    background-image: url(../static/login.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  form{
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .4);
+    padding: 50px;
+    border-radius: 4px;
+  }
+  form label{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  form input,select{
+    font-size: 18px;
+    padding: 7px;
+    width: 100%;
+    border: 1px solid #fff000;
+    color: #fff;
+    display: block;
+    background: transparent;
+  }
+  form input[type="submit"]{
+     width: 120px;
+     margin-top: 10px;
+     cursor: pointer;
+  }
+  option{
+    color: #000;
+  }
+  form p{
+    color: #fff;
+    font-size: 17px;
+  }
+  font p a{
+    color: #fff000;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  form input[type="submit"]{
+     width: 120px;
+     margin-top: 10px;
+     cursor: pointer;
+  }
+  form input[type="submit"]:hover{
+    background: red;
+    transition: 0.5s;
+  }
+
+  </style>
+  <body >
+    <nav>
+     <label class="logo">GaavV</label>
+     <ul>
+       <li><a href="{{url_for('home')}}">Home</a></li>
+       <li><a href="{{url_for('a')}}">Registration</a></li>
+       <li><a class="active">Login</a></li>
+       <li><a href="{{url_for('c')}}">Contact Us</a></li>
+     </ul>
+   </nav><marquee>
+    <h1>Login page</h1></marquee>
+    <form action="{{url_for("login")}}" method="post">
+<label class="name">User Email</label>
+<input type="text" name="name">
+<label class="pass">Password</label>
+      <input type="password" name="pass"><center>
+      <input type="submit" name="submit" class="submit" value="Login"></center>
+    </form>
+  </body>
+</html>

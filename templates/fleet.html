@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
+    <title>Book</title>
+  </head>
+  <style>
+
+body{
+  background-image: url(../static/about.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+}
+.fleet{
+  padding-top: 10%;
+}
+
+
+  </style>
+  <body>
+    <nav>
+     <label class="logo">GaavV</label>
+     <ul>
+       <li><a href="{{url_for('home')}}">Home</a></li>
+       <li><a href="{{url_for('c')}}">About Us</a></li>
+       <li><a href="{{url_for('z')}}">Logout</a></li>
+     </ul>
+    </nav>
+    <marquee width="100%" direction="left" height="80px">
+    <h1 style="color:blue">Fleet</h1></marquee>
+<div class="fleet">
+  <br><br>
+<center>
+<div style="display:block;font-weight:bold;font-size:35px;">
+<a href="{{url_for('book')}}" style="color:white">Book your Fleet</a></div><br><br>
+<div style="display:block;font-weight:bold;font-size:35px">
+<a href="{{url_for('info')}}" style="color:white">Rent your Fleet</a></div>
+</center>
+</div>
+  </body>
+</html>

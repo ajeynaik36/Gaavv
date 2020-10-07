@@ -1,0 +1,108 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transportation System</title>
+  <link rel="stylesheet" type="text/css" href="../static/index.css">
+</head>
+<style>
+
+.fleet .fleet-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 800 !important;
+  text-align: center;
+  width: 100%;
+}
+.fleet .fleet-heading .after-heading{
+  width: 50%;
+}
+.fleet .types {
+  max-width: 79%;
+  margin: auto;
+  background-color: #f2f2f2;
+  overflow: auto;
+  align: center;
+}
+.fleet .types .fig{
+  margin: 5px;
+  border: 1px solid green;
+  float: left;
+  width: 390px;
+  padding: 20px;
+}
+.fleet .types .fig img{
+  width: 100%;
+  height: auto;
+}
+.fleet .types .fig figcaption{
+  padding: 15px;
+  text-align: center;
+  font-style: oblique;
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+}
+.footer{
+  background: #303036;
+  color: #d3d3d3;
+  height: 50px;
+  position: relative;
+}
+.footer .footer-bottom{
+  background: #343a40;
+  color: #686868;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+  width: 100%;
+}
+.know{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #008000;
+}
+</style>
+<body>
+<nav>
+ <label class="logo">GaavV</label>
+ <ul>
+   <li><a class="active" href="#">Home</a></li>
+   <li><a href="{{url_for('a')}}">Registration</a></li>
+   <li><a href="{{url_for('b')}}">Login</a></li>
+   <li><a href="{{url_for('c')}}">Contact Us</a></li>
+ </ul>
+</nav>
+<img class="base" src="../static/index.jpg" />
+<div class="fleet">
+  <div class="fleet-heading">
+    Types of vehicle you can find here</div>
+    <hr width='30%' style="background-color: 009900;height: 3px; border: 0;">
+
+    <br>
+    <div class="types">
+      <figure class="fig" >
+        <figcaption>Bike</figcaption>
+        <img src="../static/bike.jpg" alt="Bicycles"/>
+      </figure>
+      <figure class="fig">
+        <figcaption>Car</figcaption>
+        <img src="../static/car.jpg" alt="Bicycles"/>
+      </figure>
+      <figure class="fig">
+        <figcaption>Rickshaw</figcaption>
+        <img src="../static/rixa.jpg" alt="Bicycles"/>
+      </figure>
+  </div>
+</div>
+<div class="know"><br>
+  <p >No public vehicle take a ride from our platform to ease your requirement. Reach Home safely using GaavV fleets.</p><br></div>
+  <footer class="footer">
+    <div class="footer-bottom">
+      &copy; Google.com| Designed by Ajey Naik</div>
+
+  </footer>
+</body>

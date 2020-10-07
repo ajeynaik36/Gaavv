@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+  body{
+    background-image: url(../static/about.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  tr:hover{
+    background-color: skyblue;
+  }
+  table
+  {
+
+    border-collapse: collapse;
+    background-color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    width: 70%;
+  }
+  .button{
+     width: 80px;
+     margin-top: 10px;
+     cursor: pointer;
+     background-color: darkgrey;
+  }
+  button:hover{
+    background: red;
+    transition: 0.5s;
+  }
+  </style>
+  <body>
+    <marquee>
+     <h1>Booking page</h1></marquee>
+<h1 style="color:white">Hello: {{ses}}</h1>
+<center>
+<div class="content">
+    <table border="7"  >
+    <thead>
+    <tr>
+        <th>USERNAME</th>
+        <th>Adress</th>
+        <th>Veh NO</th>
+        <th>Type</th>
+        <th>Capacity</th>
+        <th>Luggage</th>
+        <th>Contact</th>
+    </tr>
+    </thead>
+    <tbody>
+        {%for row in names%}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+
+                <td><button class="button" type="button" onclick="alert('You booked:{{row[0]}} Vehicle.Contact {{row[6]}}.');" id="booked">Book</button></td>
+            </tr>
+
+        {%endfor%}
+    </tbody>
+    </table>
+  </center>
+<h1><a href="{{url_for('home')}}" style="color:skyblue">Go to Home Page</a></h1></div>
+  </body>
+</html>
